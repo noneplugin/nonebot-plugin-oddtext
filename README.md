@@ -135,3 +135,21 @@ pip install nonebot_plugin_oddtext
 ```
 锟斤拷锟斤拷一锟斤拷
 ```
+
+
+ - rcnb
+
+> rcnb RCNB！
+
+```
+ȐĉņþƦȻƝƃÑƃȓƇnB
+```
+
+
+ - 解码rcnb
+
+> 解码rcnb ȐĉņþƦȻƝƃÑƃȓƇnB
+
+```
+RCNB！
+```

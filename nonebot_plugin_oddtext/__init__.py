@@ -18,7 +18,7 @@ __plugin_meta__ = PluginMetadata(
         "unique_name": "oddtext",
         "example": "抽象话 那真的牛逼",
         "author": "meetwq <meetwq@gmail.com>",
-        "version": "0.1.0",
+        "version": "0.1.1",
     },
 )
 

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot_plugin_oddtext"
-version = "0.1.0"
+version = "0.1.1"
 description = "Nonebot2 插件，用于抽象话等文本生成"
 authors = ["meetwq <meetwq@gmail.com>"]
 license = "MIT"
