@@ -88,7 +88,7 @@ def guwen_code(text: str) -> str:
 
 
 def kouzi_code(text: str) -> str:
-    return text.encode("gbk").decode("utf-8","replace")
+    return text.encode("gbk").decode("utf-8", "replace")
 
 
 def fuhao_code(text: str) -> str:
@@ -116,11 +116,18 @@ def pinyin_decode(text: str) -> str:
 
 
 def wenju_code(text: str) -> str:
-    return text.encode("u8").decode("gbk", "replace").encode("gbk", "replace").decode("u8", "ignore")
+    return (
+        text.encode("u8")
+        .decode("gbk", "replace")
+        .encode("gbk", "replace")
+        .decode("u8", "ignore")
+    )
 
 
 def kunkao_code(text: str) -> str:
-    return text.encode("gbk").decode("u8", "replace").encode("u8").decode("gbk", "replace")
+    return (
+        text.encode("gbk").decode("u8", "replace").encode("u8").decode("gbk", "replace")
+    )
 
 
 class Func(Protocol):
@@ -144,8 +151,8 @@ commands = [
     Command(("口字码",), kouzi_code),
     Command(("符号码",), fuhao_code),
     Command(("拼音码",), pinyin_code),
-    Command(("还原符号码","解码符号码"), fuhao_decode),
-    Command(("还原拼音码","解码拼音码"), pinyin_decode),
+    Command(("还原符号码", "解码符号码"), fuhao_decode),
+    Command(("还原拼音码", "解码拼音码"), pinyin_decode),
     Command(("问句码",), wenju_code),
-    Command(("锟拷码","锟斤拷",), kunkao_code),
+    Command(("锟拷码", "锟斤拷"), kunkao_code),
 ]

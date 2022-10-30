@@ -1,6 +1,6 @@
 # nonebot-plugin-oddtext
 
-[Nonebot2](https://github.com/nonebot/nonebot2) 插件，用于抽象话等文字生成
+[Nonebot2](https://github.com/nonebot/nonebot2) 插件，用于抽象话等文本生成
 
 
 ### 安装
@@ -38,7 +38,7 @@ pip install nonebot_plugin_oddtext
  - 火星文
 
 > 火星文 测试一下
-    
+
 ```
 測試①丅
 ```
@@ -65,3 +65,73 @@ pip install nonebot_plugin_oddtext
 > 故障文字 测试一下
 
 <img src="https://s2.loli.net/2022/08/16/ITACcLfarNuF3GZ.png" width="100" />
+
+
+ - 古文码
+
+> 古文码 测试一下
+
+```
+娴嬭瘯涓�涓�
+```
+
+
+ - 口字码
+
+> 口字码 测试一下
+
+```
+����һ��
+```
+
+
+ - 符号码
+
+> 符号码 测试一下
+
+<img src="https://s2.loli.net/2022/10/30/dpxoaRSMmfk2l9y.png" width="100" />
+
+
+ - 拼音码
+
+> 拼音码 测试一下
+
+```
+²âÊÔÒ»ÏÂ
+```
+
+
+ - 还原符号码 / 解码符号码
+
+> <img src="https://s2.loli.net/2022/10/30/Clr5nxufqPeGpWm.png" width="100" />
+
+```
+测试一下
+```
+
+
+ - 还原拼音码 / 解码拼音码
+
+> 还原拼音码 ²âÊÔÒ»ÏÂ
+
+```
+测试一下
+```
+
+
+ - 问句码
+
+> 问句码 测试一下
+
+```
+测试??
+```
+
+
+ - 锟拷码 / 锟斤拷
+
+> 锟拷码 测试一下
+
+```
+锟斤拷锟斤拷一锟斤拷
+```

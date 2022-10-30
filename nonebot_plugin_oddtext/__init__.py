@@ -11,9 +11,9 @@ from .data_source import commands, Command
 
 
 __plugin_meta__ = PluginMetadata(
-    name="多种文字生成",
-    description="抽象话、火星文等文字生成",
-    usage=("抽象话/火星文/蚂蚁文/翻转文字/故障文字 + 文本"),
+    name="文本生成器",
+    description="抽象话等多种文本生成",
+    usage=f"{'/'.join(sum([list(command.keywords) for command in commands], []))} + 文本",
     extra={
         "unique_name": "oddtext",
         "example": "抽象话 那真的牛逼",
