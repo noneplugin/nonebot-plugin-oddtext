@@ -130,6 +130,22 @@ def kunkao_code(text: str) -> str:
     )
 
 
+def rcnb_code(text: str) -> str:
+    import rcnb
+
+    return rcnb.encode(text)
+
+
+def rcnb_decode(text: str) -> str:
+    import rcnb
+
+    try:
+        res = rcnb.decode(text)
+    except:
+        res = "请输入正确的rcnb码，否则无法解码"
+    return res
+
+
 class Func(Protocol):
     def __call__(self, text: str) -> str:
         ...
@@ -155,4 +171,6 @@ commands = [
     Command(("还原拼音码", "解码拼音码"), pinyin_decode),
     Command(("问句码",), wenju_code),
     Command(("锟拷码", "锟斤拷"), kunkao_code),
+    Command(("rcnb",), rcnb_code),
+    Command(("解码rcnb",), rcnb_decode),
 ]
