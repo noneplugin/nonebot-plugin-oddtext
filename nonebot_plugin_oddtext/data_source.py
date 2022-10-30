@@ -83,6 +83,46 @@ def bug_text(text: str) -> str:
     return result
 
 
+def guwen_code(text: str) -> str:
+    return text.encode("u8").decode("gbk", "replace")
+
+
+def kouzi_code(text: str) -> str:
+    return text.encode("gbk").decode("utf-8","replace")
+
+
+def fuhao_code(text: str) -> str:
+    return text.encode("u8").decode("iso8859-1")
+
+
+def pinyin_code(text: str) -> str:
+    return text.encode("gbk").decode("iso8859-1")
+
+
+def fuhao_decode(text: str) -> str:
+    try:
+        res = text.encode("iso8859-1").decode("u8")
+    except:
+        res = "请输入正确的符号码，否则无法解码"
+    return res
+
+
+def pinyin_decode(text: str) -> str:
+    try:
+        res = text.encode("iso8859-1").decode("gbk")
+    except:
+        res = "请输入正确的拼音码，否则无法解码"
+    return res
+
+
+def wenju_code(text: str) -> str:
+    return text.encode("u8").decode("gbk", "replace").encode("gbk", "replace").decode("u8", "ignore")
+
+
+def kunkao_code(text: str) -> str:
+    return text.encode("gbk").decode("u8", "replace").encode("u8").decode("gbk", "replace")
+
+
 class Func(Protocol):
     def __call__(self, text: str) -> str:
         ...
@@ -100,4 +140,12 @@ commands = [
     Command(("蚂蚁文",), ant_text),
     Command(("翻转文字",), flip_text),
     Command(("故障文字",), bug_text),
+    Command(("古文码",), guwen_code),
+    Command(("口字码",), kouzi_code),
+    Command(("符号码",), fuhao_code),
+    Command(("拼音码",), pinyin_code),
+    Command(("还原符号码","解码符号码"), fuhao_decode),
+    Command(("还原拼音码","解码拼音码"), pinyin_decode),
+    Command(("问句码",), wenju_code),
+    Command(("锟拷码","锟斤拷",), kunkao_code),
 ]
