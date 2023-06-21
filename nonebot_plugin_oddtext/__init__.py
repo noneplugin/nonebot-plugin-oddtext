@@ -1,24 +1,27 @@
 import traceback
+
 from nonebot import on_command
+from nonebot.adapters import Message
 from nonebot.log import logger
 from nonebot.matcher import Matcher
-from nonebot.adapters import Message
-from nonebot.typing import T_Handler
 from nonebot.params import CommandArg
 from nonebot.plugin import PluginMetadata
+from nonebot.typing import T_Handler
 
-from .data_source import commands, Command
-
+from .data_source import Command, commands
 
 __plugin_meta__ = PluginMetadata(
     name="文本生成器",
     description="抽象话等多种文本生成",
     usage=f"{'/'.join(sum([list(command.keywords) for command in commands], []))} + 文本",
+    type="application",
+    homepage="https://github.com/noneplugin/nonebot-plugin-oddtext",
+    supported_adapters=None,
     extra={
         "unique_name": "oddtext",
         "example": "抽象话 那真的牛逼",
         "author": "meetwq <meetwq@gmail.com>",
-        "version": "0.1.1",
+        "version": "0.2.0",
     },
 )
 

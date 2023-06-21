@@ -1,13 +1,12 @@
 import math
 import random
-
 from dataclasses import dataclass
-from typing import Tuple, Protocol
+from typing import Protocol, Tuple
 
-from .flip import flip_table
-from .cxh import emoji, pinyin
 from .bug import bug_code, bug_level
-from .hxw import enchars, encharhxw, ftw, hxw, jtw
+from .cxh import emoji, pinyin
+from .flip import flip_table
+from .hxw import encharhxw, enchars, ftw, hxw, jtw
 
 
 def cxh_text(text: str) -> str:

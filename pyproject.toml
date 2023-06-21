@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot_plugin_oddtext"
-version = "0.1.2"
+version = "0.2.0"
 description = "Nonebot2 插件，用于抽象话等文本生成"
 authors = ["meetwq <meetwq@gmail.com>"]
 license = "MIT"
@@ -10,7 +10,7 @@ repository = "https://github.com/noneplugin/nonebot-plugin-oddtext"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-nonebot2 = { version = "^2.0.0-rc.1", extras = ["fastapi"] }
+nonebot2 = { version = "^2.0.0", extras = ["fastapi"] }
 rcnb = "^1.0.3"
 
 [tool.poetry.group.dev.dependencies]
