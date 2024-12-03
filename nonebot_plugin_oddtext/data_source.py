@@ -1,7 +1,7 @@
 import math
 import random
 from dataclasses import dataclass
-from typing import Protocol, Tuple
+from typing import Protocol
 
 from .bug import bug_code, bug_level
 from .cxh import emoji, pinyin
@@ -101,7 +101,7 @@ def pinyin_code(text: str) -> str:
 def fuhao_decode(text: str) -> str:
     try:
         res = text.encode("iso8859-1").decode("u8")
-    except:
+    except Exception:
         res = "请输入正确的符号码，否则无法解码"
     return res
 
@@ -109,7 +109,7 @@ def fuhao_decode(text: str) -> str:
 def pinyin_decode(text: str) -> str:
     try:
         res = text.encode("iso8859-1").decode("gbk")
-    except:
+    except Exception:
         res = "请输入正确的拼音码，否则无法解码"
     return res
 
@@ -140,19 +140,18 @@ def rcnb_decode(text: str) -> str:
 
     try:
         res = rcnb.decode(text)
-    except:
+    except Exception:
         res = "请输入正确的rcnb码，否则无法解码"
     return res
 
 
 class Func(Protocol):
-    def __call__(self, text: str) -> str:
-        ...
+    def __call__(self, text: str) -> str: ...
 
 
 @dataclass
 class Command:
-    keywords: Tuple[str, ...]
+    keywords: tuple[str, ...]
     func: Func
 
 
